@@ -1,0 +1,237 @@
+/* search.css */
+:root {
+    --main-bg: #121212;
+    --sidebar-bg: #000;
+    --card-bg: #181818;
+    --highlight: #1a1a1a;
+    --accent: #1ed760;
+    --text-primary: #fff;
+    --text-secondary: #b3b3b3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--main-bg);
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "sidebar main"
+        "player player";
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 1fr auto;
+    height: 100vh;
+}
+
+/* Barre de recherche */
+.search-container {
+    padding: 24px;
+}
+
+.search-bar {
+    background: #fff;
+    border-radius: 500px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.search-bar svg {
+    fill: #000;
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px;
+}
+
+.search-bar input:focus {
+    outline: none;
+}
+
+/* Filtres */
+.filters {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.filter-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 500px;
+    color: var(--text-primary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.filter-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.filter-btn.active {
+    background: var(--text-primary);
+    color: #000;
+}
+
+/* Résultats de recherche */
+.search-results {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.results-section h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 24px;
+}
+
+/* Cartes artistes */
+.artist-card {
+    background: var(--card-bg);
+    padding: 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.artist-card:hover {
+    background: var(--highlight);
+}
+
+.artist-image {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    object-fit: cover;
+}
+
+.artist-name {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.artist-type {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* Cartes albums */
+.album-card {
+    background: var(--card-bg);
+    padding: 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.album-card:hover {
+    background: var(--highlight);
+}
+
+.album-image {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    object-fit: cover;
+}
+
+.album-name {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.album-artist {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* Liste des titres */
+.track-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.track-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.track-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    margin-right: 16px;
+}
+
+.track-info {
+    flex: 1;
+}
+
+.track-name {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.track-artist {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.track-duration {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-left: 16px;
+}
+
+/* États de chargement */
+.loading {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 32px;
+}
+
+/* Message pas de résultats */
+.no-results {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 32px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.results-section {
+    animation: fadeIn 0.3s ease-out;
+}
