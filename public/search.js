@@ -14,8 +14,8 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // Configuration Spotify
-const CLIENT_ID = '1e5be8f0746c49e5a7a6ae3efe30d28b';
-const CLIENT_SECRET = '7de0421ed068446fa699cbf130033982';
+const CLIENT_ID = 'client_id';
+const CLIENT_SECRET = 'client_secret';
 let spotifyToken = null;
 let tokenExpirationTime = null;
 
