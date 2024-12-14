@@ -100,7 +100,7 @@ ETA: Quand le beat tombera 🎶
 SAMUEL ALHADEF - [TWITTER](https://x.com/SAMUELALHADEF)
                - [LINKEDIN](https://www.linkedin.com/in/samuel-alhadef-190951257/)
 
-Lien du projet: [https://github.com/votre-username/spotify-clone](https://github.com/Samuelalhadef/Spotify_Clone)
+Lien du projet: [https://github.com/Samuelalhadef/Spotify_Clone](https://github.com/Samuelalhadef/Spotify_Clone)
 
 ---
 <div align="center">
